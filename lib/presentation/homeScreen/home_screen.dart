@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:mental_health/features/meditation/presentation/pages/meditation_screen.dart';
-import 'package:mental_health/features/music/presentation/pages/music_player_screen.dart';
+import 'package:mental_health/features/music/presentation/pages/playlist_screen.dart';
 import 'package:mental_health/presentation/bottomNavBar/widgets/bottom_nav_bar.dart';
 import '../bottomNavBar/bloc/navigation_bloc.dart';
 import '../bottomNavBar/bloc/navigation_state.dart';
@@ -9,7 +9,7 @@ import '../bottomNavBar/bloc/navigation_state.dart';
 class HomeScreen extends StatelessWidget {
   final List<Widget> pages = const [
     MeditationScreen(),
-    MusicPlayerScreen(),
+    PlaylistScreen()
   ];
 
   const HomeScreen({super.key});
@@ -31,7 +31,7 @@ class HomeScreen extends StatelessWidget {
 
         final List<BottomNavigationBarItem> bottomNavItems = [
           createBottomNavItem(assetName: 'assets/menu_home.png', isActive: true, context: context, label: 'Home'),
-          createBottomNavItem(assetName: 'assets/menu_songs.png', isActive: false, context: context, label: 'Songs'),
+          createBottomNavItem(assetName: 'assets/menu_songs.png', isActive: false, context: context, label: 'Songs')
         ];
 
         return BottomNavBar(items: bottomNavItems, currentIndex: currentIndex);
