@@ -9,9 +9,9 @@ class MeditationScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: DefaultColors.white,
       appBar: AppBar(
-        backgroundColor: Colors.white,
+        backgroundColor: DefaultColors.white,
         elevation: 0,
         leading: Image.asset('assets/menu_burger.png'),
         actions: const [
